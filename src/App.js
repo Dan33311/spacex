@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Rockets from "./Rockets";
+import Dragons from "./Dragons"
 // import backgroundImage from "./images/spacex-Ptd-iTdrCJM-unsplash.jpg"
 
 
@@ -11,19 +12,22 @@ function App() {
     <Router>
       <div className="App">
         <div className="content">
-          <Switch>
-            <div className="container">
-              <div className="layer">
-                <Route exact path="/">
-                  <Navbar />
-                  {/* <Home /> */}
+          <div className="container">
+            <div className="layer">
+              <Navbar />
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Switch>
+                <Route path="/rockets">
+                  <Rockets />
                 </Route>
-              </div>
+                <Route path="/dragons">
+                  <Dragons />
+                </Route>
+              </Switch>       
             </div>
-            <Route path="/rockets">
-              <Rockets />
-            </Route>
-          </Switch>       
+          </div>
         </div>
       </div>
     </Router>

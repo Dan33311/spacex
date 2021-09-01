@@ -1,28 +1,37 @@
 const InfoList = ({ info }) => {
   return (
     <div className="info">
-      <h2>{info.name}</h2>
-      <p>{info.summary}</p>
+
+      <div className="info-summary">
+        <h3>SPACEX SUMMARY</h3>
+        <div className="info-p">
+          <p>{info.summary}</p>
+        </div>
+      </div>
+
       <div className="info-details">
-        <ul>
-          <li>founder: {info.founder}</li>
-          <li>founded: {info.founded}</li>
-          <li>employees: {info.employees}</li>
-          <li>vehicles: {info.vehicles}</li>
-          <li>launch sites: {info.launch_sites}</li>
-          <li>ceo: {info.ceo}</li>
-          <li>cto: {info.cto}</li>
-          <li>coo: {info.coo}</li>
-          <li>cto propulsion: {info.cto_propulsion}</li>
-          <li>valuation: {info.valuation}</li>
-          <li>headquarters:
-            <ul>
-              <li>address: {info.headquarters.address}</li>
-              <li>city: {info.headquarters.city}</li>
-              <li>state: {info.headquarters.state}</li>
-            </ul>
-          </li>  
-        </ul>
+        <h3>Company Info</h3>
+        <div className="info-ul">
+          <ul>
+            <li><span className="title">founder: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.founder}</span></li>
+            <li><span className="title">founded: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.founded}</span></li><br />
+            <li><span className="title">employees: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.employees}</span></li>
+            <li><span className="title">vehicles: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.vehicles}</span></li>
+            <li><span className="title">launch sites: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.launch_sites}</span></li><br />
+            <li><span className="title">ceo: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.ceo}</span></li>
+            <li><span className="title">cto: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.cto}</span></li>
+            <li><span className="title">coo: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.coo}</span></li>
+            <li><span className="title">cto propulsion: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.cto_propulsion}</span></li><br />
+            <li><span className="title">valuation: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.valuation}</span></li><br />
+            <div className="headq">headquarters:
+              <ul>
+                <li><span className="title">address: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.headquarters.address}</span></li>
+                <li><span className="title">city: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.headquarters.city}</span></li>
+                <li><span className="title">state: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.headquarters.state}</span></li>
+              </ul>
+            </div>  
+          </ul>
+        </div>
       </div>
     </div>
   );
