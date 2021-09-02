@@ -4,6 +4,7 @@ import Home from "./Home";
 import Navbar from "./Navbar";
 import Rockets from "./Rockets";
 import Dragons from "./Dragons"
+import NotFound from "./NotFound";
 // import backgroundImage from "./images/spacex-Ptd-iTdrCJM-unsplash.jpg"
 
 
@@ -14,18 +15,21 @@ function App() {
         <div className="content">
           <div className="container">
             <div className="layer">
-              <Navbar />
-              <Route exact path="/">
-                <Home />
-              </Route>
+              <Navbar />             
               <Switch>
+                <Route exact path="/">
+                  <Home />               
+                </Route>
                 <Route path="/rockets">
                   <Rockets />
                 </Route>
                 <Route path="/dragons">
                   <Dragons />
                 </Route>
-              </Switch>       
+                <Route path="*" >               
+                  <NotFound />
+                </Route>
+              </Switch>           
             </div>
           </div>
         </div>

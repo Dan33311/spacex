@@ -1,5 +1,6 @@
 import useFetch from "./useFetch";
 import InfoList from "./InfoList";
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -8,8 +9,10 @@ const Home = () => {
   return (
     <>
       { error && <div>{ error }</div>}
-      { isPending && <div>Loading ...</div> }
-      { info && <InfoList info={info} />}
+      { isPending && <div className="spinner-container">
+        <div className="spinner"></div></div> }
+      { info && <><InfoList info={info} />
+        <Footer/></>}
     </>
   )
 }

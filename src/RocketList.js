@@ -1,6 +1,5 @@
 import rocketImage from "./images/rocket.png";
 
-
 const RocketsList = ({ rockets }) => {
   return (
     <div className="rockets-list">
@@ -11,7 +10,7 @@ const RocketsList = ({ rockets }) => {
 
       <div className="rc-1">
         { rockets.map((rocket) => (
-          <div className="rp" key={rocket.id}>
+          <div className="rp spacex-text" key={rocket.id}>
             <h3 className="rname spacex-title">{rocket.rocket_name}</h3>
             <div className="rbox spacex-box">
               <div className="rgroup1">

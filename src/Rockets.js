@@ -1,5 +1,6 @@
 import useFetch from "./useFetch";
 import RocketsList from "./RocketList";
+import Footer from "./Footer";
 
 // 'https://api.spacexdata.com/v3/rockets'
 const Rockets = () => {
@@ -9,8 +10,10 @@ const Rockets = () => {
   return (
     <div className="rockets">
       { error && <div>{ error }</div>}
-      { isPending && <div>Loading ...</div> }
-      { rockets && <RocketsList rockets={rockets} />}
+      { isPending && <div className="spinner-container">
+        <div className="spinner"></div></div> }
+      { rockets && <><RocketsList rockets={rockets} />
+      <Footer/></>}
     </div>
   )
 }
