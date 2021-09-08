@@ -1,18 +1,21 @@
+import companyImage from "./images/spacex-Ptd-iTdrCJM-unsplash.jpg"
+
 const InfoList = ({ info }) => {
   return (
     <div className="info">
 
       <div className="info-summary">
-        <h3>SPACEX SUMMARY</h3>
+        <h3 className='spacex-title'>SPACEX SUMMARY</h3>
         <div className="info-p spacex-box">
-          <p>{info.summary}</p>
+          <p className='spacex-text'>{info.summary}</p>
         </div>
+        <img src={companyImage} alt="company image" />
       </div>
 
       <div className="info-details">
-        <h3>Company Info</h3>
+        <h3 className='spacex-title'>Company Info</h3>
         <div className="info-ul spacex-box">
-          <ul>
+          <ul className='spacex-text'>
             <li><span className="title">Founder: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.founder}</span></li>
             <li><span className="title">Founded: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.founded}</span></li><br />
             <li><span className="title">Employees: {'\u00A0'}{'\u00A0'}</span><span className="content">{info.employees}</span></li>
